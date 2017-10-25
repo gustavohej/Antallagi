@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i')
+$font-stack: Roboto, sans-serif
+
+$black-text       : #000
+$white-text       : #FAFAFA
+$grey-text        : #8C8C8C
+$grey-light-text  : #B5B5B5
+$disabled-text    : #C3C3C3
+$placeholder-text : #CACACA
+
+$primary-color    : #448AFF
+$lighter-color    : #82B1FF
+$darker-color     : #2962FF
+$background-color : #FAFAFA
+$white-color      : #FFF
+
+$bold     : bold
+$default  : default
+
+$right : right
+$left  : left
+
+$inline-block : inline-block
+
+@mixin padding-style($top, $left, $bottom, $right)
+  padding: $top $left $bottom $right
+
+@mixin button-style($bg-color)
+  @include padding-style(8px, 16px, 8px, 16px)
+  border-radius: 2px
+  background-color: $bg-color
+
+@mixin text-style($size, $weigth, $style, $align, $spacing, $color)
+  font-size: $size
+  font-weight: $weigth
+  font-style: $style
+  text-align: $align
+  letter-spacing: $spacing
+  color: $color
+
+@mixin flex-align-items($align)
+  display: flex
+  display: -webkit-flex
+  display: -ms-flexbox
+  align-items: $align
+
+a
+  text-decoration: none
+
+.button
+  @include button-style(#efefef)
+  text-overflow: ellipsis
+  white-space: nowrap
+  overflow: hidden
+  display: inline-block
+
+.button:hover
+  @include button-style(#dedede)
+
+.button-link
+  @include text-style(14px, 400, normal, center, .5px, $primary-color)
+
+.button-primary
+  @include button-style($primary-color)
+  @include text-style(14px, 400, normal, center, .5px, $white-text)
+
+*
+  -webkit-box-sizing  : border-box
+  -moz-box-sizing     : border-box
+  box-sizing          : border-box
+  margin  : 0
+  padding : 0
+  border  : 0
+
+html, body
+  font-family: $font-stack
+  background-color: $background-color
+
+h1
+  margin: 25px 30px 10px 0
+  @include text-style(30px, 300, normal, left, 0, #212121)
+
+nav
+  display: flex
+  display: -webkit-flex
+  display: -ms-flexbox
+  align-items: center
+  height: 56px
+  background-color: $primary-color
+  padding: 0 16px
+  color: $white-text
+  box-shadow: 0 2px 5px rgba(0,0,0,.26)
+  div
+    margin: 0 16px
+  a
+    color: $white-text
+    text-decoration: none
+    font-weight: $bold
+    border-radius: 2px
+    span
+      img
+        border-radius: 50%
+  ul
+    display: flex
+    display: -webkit-flex
+    display: -ms-flexbox
+    align-items: center
+    list-style: none
+    li
+      display: inline-block
+      margin: 0 12px
+      a
+        letter-spacing: 2px
+        height: 56px
+
+.border-right
+  border-right: 1px solid #DEDEDE
+
+.float-right
+  float: right
+
+.center
+  margin: 0 auto
+
+.search
+  -webkit-flex-grow: 1
+  -ms-flex-positive: 1
+  flex-grow: 1
+  text-align: center
+  form
+    position: relative
+    div
+      display: inline-flex
+      align-items: center
+      box-shadow: 0 1px 2px rgba(0,0,0,.26)
+      label
+        display: none
+      input
+        border-radius: 2px 0 0 2px
+        min-width: 400px
+        padding: 10px 0 10px 10px
+        background-color: $background-color
+        font-size: 16px
+        line-height: 20px
+      button
+        background-color: $background-color
+        border-radius: 0 2px 2px 0
+        color: #9A9A9A
+        font-size: 16px
+        cursor: pointer
+        i
+          line-height: 20px
+          padding: 10px
+
+.border-radius
+  border-radius: 2px 0 0 2px
+
+.logo a
+  font-size: 20px
+  background-color: transparent
+  border-radius: 2px
+  padding: initial
+  box-shadow: initial
+
+button:focus,
+input:focus
+  outline: thin dotted
+  outline: 0px auto -webkit-focus-ring-color
+  outline-offset: 0px
+
+::-webkit-input-placeholder
+  color: $placeholder-text
+::-moz-placeholder
+  color: $placeholder-text
+::-moz-placeholder
+  color: $placeholder-text
+::-ms-input-placeholder
+  color: $placeholder-text
+
+.card
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2)
+  @extend .border-radius
+  position: relative
+  background-color: $white-color
+
+.card-img
+  @extend .border-radius
+  cursor: pointer
+  position: relative
+  overflow: hidden
+  height: 200px
+  background-color: #000
+
+.card-img-galery
+  @extend .border-radius
+  cursor: pointer
+  position: relative
+  overflow: hidden
+  height: 300px
+  background-color: #000
+
+.card-img, .card-img-galery
+  img
+    object-fit: cover
+    height: 100%
+    width: 100%
+
+.card-galery
+  padding: 3px
+  display: -webkit-flex
+  display: -ms-flexbox
+  display: flex
+  -webkit-flex-flow: row wrap
+  -ms-flex-flow: row wrap
+  flex-flow: row wrap
+  margin: 0 auto
+  -webkit-align-items: stretch
+  -ms-flex-align: stretch
+  align-items: stretch
+  .card-galery-img
+    padding: 3px
+    display: inline-block
+    width: 25%
+    height: 120px
+    a
+      img
+        object-fit: cover
+        height: 100%
+        width: 100%
+
+.card-container
+  .card-title
+    padding: 16px 0 4px 16px
+    position: relative
+    @include flex-align-items(center)
+    div
+      position: absolute
+      right: 0
+      top: 0
+      bottom: 0
+      background: linear-gradient(to right, transparent , #FFF)
+      width: 80px
+    span
+      font-size: 18px
+      overflow: hidden
+      white-space: nowrap
+      width: 100%
+    i
+      color: $grey-text
+    a
+      z-index: 1
+      padding-left: 5px
+
+  .card-star
+    @include flex-align-items(flex-start)
+    padding: 0 0 16px 16px
+    .star
+      i
+        color: #ffd652
+    a
+      text-decoration: none
+      font-size: 16px
+      i
+        font-size: 16px
+        color: #b5b5b5
+    span
+      padding-left: 8px
+      color: $grey-text
+      font-size: 14px
+  .location
+    padding: 0 16px
+    @include flex-align-items(center)
+    font-size: 12px
+    font-weight: 600
+    color: $grey-text
+    i
+      padding-right: 6px
+      font-size: 16px
+      color: $grey-text
+  .price
+    @include flex-align-items(center)
+    padding: 8px 16px
+    span
+      font-size: 16px
+      color: #3e3e3e
+      small
+        font-size: 12px
+        color: #8c8c8c
+  p
+    padding: 0 16px
+    margin: 8px 0
+    font-size: 13px
+    color: $grey-text
+    height: 46px
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
+    overflow: hidden
+    text-overflow: ellipsis
+    display: -webkit-box
+
+.card-action
+  padding: 0 16px
+  .action
+    @include flex-align-items(center)
+    border-top: 1px solid #DEDEDE
+    padding: 8px 0
+    a
+      text-decoration: none
+    span
+      @include flex-align-items(center)
+      color: #8c8c8c
+      font-size: 14px
+      i
+        font-size: 16px
+        padding-right: 6px
+
+.anuncio-sub-title
+  @include flex-align-items(center)
+  margin-bottom: 38px
+  span
+    font-size: 14px
+    font-weight: 500
+  span, small, i
+    color: $grey-text
+  i
+    font-size: 20px
+    padding-right: 6px
+
+.anuncio-button
+  display: inline-block
+  width: 100%
+
+.anuncio-container
+  margin-top: 16px
+  border-top: 1px solid #DEDEDE
+  p
+    font-weight: 300
+    margin: 16px 0
+  span
+    @include text-style(48px, 300, normal, center, .5px, $black-text)
+  .star i
+    color: #ffd652
+  i
+    color: #b5b5b5
+
+a
+  color: $primary-color
+
+//@media screen and (max-width : 250px)
+
+.divider
+  -webkit-flex-grow: 1
+  -ms-flex-positive: 1
+  flex-grow: 1
+
+.box-shadow
+  box-shadow: 0 3px 5px rgba(0,0,0,.26)
+
+.border-radius
+  border-radius: 2px
