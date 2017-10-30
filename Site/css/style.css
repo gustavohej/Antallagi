@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Sofia|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
 a {
   text-decoration: none; }
 
@@ -131,6 +131,7 @@ nav {
   border-radius: 2px 0 0 2px; }
 
 .logo a {
+  font-family: Sofia, cursive;
   font-size: 20px;
   background-color: transparent;
   border-radius: 2px;
@@ -165,7 +166,7 @@ input:focus {
   position: relative;
   overflow: hidden;
   height: 200px;
-  background-color: #000; }
+  background-color: #d3d3d3; }
 
 .card-img-galery {
   cursor: pointer;
