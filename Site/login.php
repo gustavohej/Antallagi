@@ -2,7 +2,7 @@
 include('header.php');
 ?>
 
-     <section>
+ <section>
       <div class="grid">
         <div class="grid-row">
           <div class="grid-col col--3 col--middle">
