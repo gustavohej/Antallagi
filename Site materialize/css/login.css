@@ -1,6 +1,17 @@
 .card{
-	height:315px;	
+	
 }
 .btn{
+	margin-top:-7px;
 	float:right;
+}
+
+@media screen and (max-width: 605px) {
+    .btn {
+		padding:0 8px;
+        
+    }
+	.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+		margin-right: 0px!important;
+	}
 }
