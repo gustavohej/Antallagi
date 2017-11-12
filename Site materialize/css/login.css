@@ -1,17 +1,18 @@
-.card{
-	
+a{
+    float: left;
+    padding: 12px
 }
-.btn{
-	margin-top:-7px;
-	float:right;
+.modal .modal-footer .btn{
+margin-right: 10px;
 }
-
-@media screen and (max-width: 605px) {
-    .btn {
-		padding:0 8px;
-        
-    }
-	.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
-		margin-right: 0px!important;
-	}
+.modal.modal-fixed-footer{
+     height: 70% !important;
+    width: 50% !important;
+    max-width:500px;
+    max-height:400px;
+}
+#erroruser
+{
+color: #d50000;
+display:none;
 }

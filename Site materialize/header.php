@@ -5,30 +5,28 @@
     <title></title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/style.css">    
-    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/style.css">
+	  <link rel="stylesheet" href="css/header.css">
   </head>
-
   <body>
 <header>
       <nav>
-        <p class="logo">
+        <div class="logo">
           <a href="#">Antallagi</a>
-        </p>
+        </div>
+       <!-- <div class="search">
+          <form class="" action="index.html" method="post">
+            <div class="">
+              <label for=""></label>
+              <input type="text" name="" value="" placeholder="Pesquisar">
+              <button type="button" name="button"><i class="material-icons">search</i></button>
+            </div>
+          </form>
+        </div>           -->
+        <div class="entrar">
+          <a href="#" onclick="$('#modal1').modal('open');">Entrar</a>
+        </div>
         
-          <div class="nav-wrapper">
-            <form>
-              <div class="input-field">
-                <input id="search" type="search" required>
-                <label class="label-icon" for="search"><i class="lHeightSearch material-icons">search</i></label>
-                <i class="material-icons">close</i>
-              </div>
-            </form>
-          </div>
-
-          <div class="entrar">
-            <a href="#">Entrar</a>
-          </div>
         <!--
         <div class="">
           <ul>
