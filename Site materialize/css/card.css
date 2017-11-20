@@ -1,0 +1,47 @@
+.card .card-head {
+	padding: 8px 24px;
+	display: flex;
+	align-items: center;
+}
+
+.card .card-head a {
+	display: flex;
+}
+
+.card .card-head a img{
+	width: 32px;
+	height: 32px;
+	object-fit: cover;
+	border-radius: 50% 50%;
+}
+
+.card .card-head span{
+	margin-left: 8px;
+}
+
+.card .card-head a i{
+	font-size: 14px;
+	color: #8c8c8c;
+}
+
+.card .card-image img {
+	height: 200px;
+	object-fit: cover;
+}
+
+.card .card-content p {
+	-webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
+
+.card .card-action span {
+	float: right;
+}
+
+.divider-no-border {
+	flex-grow: 1;
+	border: initial;
+}
