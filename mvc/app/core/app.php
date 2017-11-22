@@ -3,7 +3,7 @@
 namespace app\core;
 
 class App{
-
+	
   protected $controller = 'Home';
 
   protected $method = 'index';
@@ -11,9 +11,9 @@ class App{
   protected $param = [];
 
   public function __construct(){
-
+		
     $url = self::parseURL($_SERVER['REQUEST_URI']);
-
+	
     if(file_exists('app/controllers/' . $url[0] . '.php')){
       $this->controller = $url[0];
       unset($url[0]);
@@ -33,7 +33,7 @@ class App{
 
   private function parseUrl($url){
 
-    $url = substr($url, 5, strlen($url));
+    $url = substr($url, 15, strlen($url));
     return explode("/", filter_var(rtrim($url), FILTER_SANITIZE_URL));
   }
 

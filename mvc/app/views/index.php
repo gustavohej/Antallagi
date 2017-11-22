@@ -1,4 +1,4 @@
-<?php
+﻿<?php
   use app\lib\html;
 ?>
 <!DOCTYPE html>
