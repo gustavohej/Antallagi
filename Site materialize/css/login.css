@@ -1,0 +1,18 @@
+a{
+    float: left;
+    padding: 12px
+}
+.modal .modal-footer .btn{
+margin-right: 10px;
+}
+.modal.modal-fixed-footer{
+     height: 70% !important;
+    width: 50% !important;
+    max-width:500px;
+    max-height:400px;
+}
+#erroruser
+{
+color: #d50000;
+display:none;
+}

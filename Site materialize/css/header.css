@@ -1,0 +1,12 @@
+.entrar{
+float:right;
+line-height: 45px !important;
+}
+.search form{
+       position: absolute;
+    margin-left: 25%;
+}
+nav{
+      background-color: #42a5f5 !important;
+}
+

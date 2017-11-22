@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/login.css">
+	  <link rel="stylesheet" href="css/header.css">
   </head>
   <body>
 <header>
@@ -14,7 +14,7 @@
         <div class="logo">
           <a href="#">Antallagi</a>
         </div>
-        <div class="search">
+       <!-- <div class="search">
           <form class="" action="index.html" method="post">
             <div class="">
               <label for=""></label>
@@ -22,10 +22,11 @@
               <button type="button" name="button"><i class="material-icons">search</i></button>
             </div>
           </form>
+        </div>           -->
+        <div class="entrar">
+          <a href="#" onclick="$('#modal1').modal('open');">Entrar</a>
         </div>
-        <div class="">
-          <a href="#">Entrar</a>
-        </div>
+        
         <!--
         <div class="">
           <ul>
