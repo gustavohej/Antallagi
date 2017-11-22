@@ -5,6 +5,6 @@ use app\lib\session;
 
 include('autoload.php');
 
-new Session();
+new Session('teste@teste.com', 1234);
 
 new App();

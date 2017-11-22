@@ -8,7 +8,7 @@ use Exception;
 
 class Session extends DAO{
 
-  protected $table = 'clientes';
+  protected $table = 'login';
 
   private $email;
   private $senha;
@@ -22,7 +22,7 @@ class Session extends DAO{
       if($stmt->rowCount() == 0){
         throw new Exception('Dados de logon incorretos!');
       } else {
-        $_SESSION['cliente'] = $stmt->fetch();
+        $_SESSION['login'] = $stmt->fetch();
       }
     } catch (Exception $e) {
       $e->getMessage();
@@ -46,7 +46,7 @@ class Session extends DAO{
   }
 
   public function find(){
-    $sql = 'SELECT * FROM ' . $this->table . ' WHERE email_cliente = :email AND senha_cliente = :senha';
+    $sql = 'SELECT * FROM ' . $this->table . ' WHERE email = :email AND senha = :senha';
     $stmt = DAO::prepare($sql);
     $stmt->bindParam(':email', $this->email);
     $stmt->bindParam(':senha', $this->senha);
@@ -59,7 +59,7 @@ class Session extends DAO{
   }
 
   public function __destruct(){
-    if (!isset($_SESSION['cliente'])) {
+    if (!isset($_SESSION['login'])) {
       session_start();
     }
   }
