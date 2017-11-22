@@ -5,34 +5,20 @@ namespace app\models;
 use app\lib\crud;
 use app\dao\dao;
 
-class Clientes extends Crud{
+class Usuarios extends Crud{
 
-  protected $table = 'clientes';
+  protected $table = 'login';
 
   private $id = null;
-  private $nome;
   private $email;
-  private $telefone;
   private $senha;
-  private $nascimento;
+  private $tipo;
 
-  public function getNome(){
-    return $this->nome;
-  }
-  public function setNome($nome){
-    $this->nome = $nome;
-  }
   public function getEmail(){
     return $this->email;
   }
   public function setEmail($email){
     $this->email = $email;
-  }
-  public function getTelefone(){
-    return $this->telefone;
-  }
-  public function setTelefone($telefone){
-    $this->telefone = $telefone;
   }
   public function getSenha(){
     return $this->senha;
@@ -40,26 +26,30 @@ class Clientes extends Crud{
   public function setSenha($senha){
     $this->senha = $senha;
   }
-  public function getNascimento(){
-    return $this->nascimento;
+  public function getTipo(){
+    return $this->tipo;
   }
-  public function setNascimento($nascimento){
-    $this->nascimento = $nascimento;
+  public function setTipo($tipo){
+    $this->tipo = $tipo;
   }
 
   public function insert(){
-    $sql  = 'INSERT INTO '. $this->table .' (nome_cliente, email_cliente, telefone_cliente, senha_cliente, data_nasc_cliente)
-             VALUES (:nome, :email, :telefone, :senha, :nascimento)';
+    $sql  = 'INSERT INTO '. $this->table .' (email, senha, tipo)
+             VALUES (:email, :senha, :tipo)';
     $stmt = DAO::prepare($sql);
-    $stmt->bindParam(':nome', $this->nome);
     $stmt->bindParam(':email', $this->email);
-    $stmt->bindParam(':telefone', $this->telefone);
     $stmt->bindParam(':senha', $this->senha);
-    $stmt->bindParam(':data_nasc', $this->nascimento);
+    $stmt->bindParam(':tipo', $this->tipo);
     return $stmt->execute();
   }
 
   public function update($id){
-
+	$sql  = 'UPDATE clientes SET email = :email,
+             senha = :senha, tipo = :tipo WHERE idLogin = :id';
+    $stmt = DAO::prepare($sql);
+    $stmt->bindParam(':email', $this->email);
+    $stmt->bindParam(':senha', $this->senha);
+    $stmt->bindParam(':tipo', $this->tipo);
+    return $stmt->execute();
   }
 }

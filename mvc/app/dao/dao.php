@@ -6,7 +6,7 @@ use PDO;
 
 define('DB_HOST', 'localhost');
 
-define('DB_NAME', 'bd_clientes');
+define('DB_NAME', 'mydb');
 
 define('DB_USER', 'root');
 
